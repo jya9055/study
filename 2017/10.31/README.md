@@ -10,7 +10,8 @@
 ### Try Git!
 > [Just Typing](https://try.github.io/levels/1/challenges/1)
 
-
+- [Fork 한 repository 최신으로 동기화하기](https://json.postype.com/post/210431)
+- [github fork 후 원본과 sync 맞추기](http://fronteer.kr/bbs/view/188)
 
 ## Markdown
 > 일반 텍스트 문서를 편집하는 보편적인 양식, 개발 생태계에선 거의 표준
