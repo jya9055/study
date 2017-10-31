@@ -1,9 +1,9 @@
 # 2017.10.31
 
 ## Members
-- sanghak,lee
-- **Remove and edit here, your name**
-- **Remove and edit here, your name**
+1. sanghak,lee
+1. **Remove and edit here, your name**
+1. **Remove and edit here, your name**
 
 
 ## Git
