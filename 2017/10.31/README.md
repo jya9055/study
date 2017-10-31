@@ -2,8 +2,8 @@
 
 ## Members
 - sanghak,lee
-- **Remove and edit here, your name**
-- **Remove and edit here, your name**
+- yangah, Jo
+- minkyeong, Kim
 
 
 ## Git
