@@ -16,6 +16,8 @@ def add(a, b):
     return a + b
 ```
 
+[링크](http://www.naver.com)
+
 ## Git
 ### Try Git!
 > [Just Typing](https://try.github.io/levels/1/challenges/1)
