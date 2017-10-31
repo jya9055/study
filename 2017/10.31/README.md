@@ -5,11 +5,19 @@
 - **Remove and edit here, your name**
 - **Remove and edit here, your name**
 
+
+## Git
+### Try Git!
+> [Just Typing](https://try.github.io/levels/1/challenges/1)
+
+
+
 ## Markdown
 > 일반 텍스트 문서를 편집하는 보편적인 양식, 개발 생태계에선 거의 표준
 
 - [마크다운(Markdown)익히기](http://sergeswin.com/1013)
 - [마크다운 markdown 작성법](https://gist.github.com/ihoneymon/652be052a0727ad59601)
+
 
 ## Project Management
 > 효과적인 프로젝트 관리를 위한 방법
