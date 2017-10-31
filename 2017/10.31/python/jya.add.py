@@ -1,11 +1,5 @@
-def add(a, b):
-  return a+b
+def add(a, b, c):
+  return a + b + c
   
-  add(3, 5)
-  add(3, 5):
-  
-  
-  
-def add(a, b)=a+b:
-  add(4, 5);
-  
+j = add(3, 4, 5)
+print(j)
