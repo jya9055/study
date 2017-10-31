@@ -12,4 +12,4 @@
     - 함수의 리턴 값은 2개의 파라미터를 더한 값.
     - 나머지 조건 없음.
     - `./python` 폴더 아래에 파일 작성 ( {NAME}.add.py )
-        - e.g.) `./python/lsh.add.py`
+        - e.g.) [`./python/lsh.add.py`](https://github.com/Yokan-Study/study/blob/master/2017/10.31/python/lsh.add.py)
