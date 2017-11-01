@@ -13,3 +13,10 @@
     - 나머지 조건 없음.
     - `./python` 폴더 아래에 파일 작성 ( {NAME}.add.py )
         - e.g.) [`./python/lsh.add.py`](https://github.com/Yokan-Study/study/blob/master/2017/10.31/python/lsh.add.py)
+
+## After
+
+1. Markdown으로 프로필 작성하기
+    - 아래와 같은 화면이 나와야 함
+    ![markdown](https://user-images.githubusercontent.com/9030565/32254506-81ac19a4-bee4-11e7-8fcb-ec1d32dd739d.PNG)
+
