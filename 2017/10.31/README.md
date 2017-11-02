@@ -2,9 +2,8 @@
 
 ## Members
 1. sanghak,lee
-2. 11
-3. **Remove and edit here, your name**
-4. **Remove and edit here, your name**
+2. yangah, jo
+3. minkyeong, kim
 
 - 111
 - 111
