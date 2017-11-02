@@ -13,7 +13,7 @@
 ![python logo] (/python-logo.png)
 > Image path: [http://www.python.org/static/img/python-logo.png](http://www.python.org/static/img/python-logo.png)
 
-##. My First Function
+## My First Function
 > Add function
 ```
 def add(a, b):
@@ -21,5 +21,4 @@ def add(a, b):
 
 j = add(3, 5)
 print(j)
-
 ```
