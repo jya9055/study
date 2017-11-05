@@ -2,7 +2,7 @@
 
 ## Members
 - sanghak,lee
-- **Remove and edit here, your name**
+- Minkyeong Kim
 - **Remove and edit here, your name**
 
 
