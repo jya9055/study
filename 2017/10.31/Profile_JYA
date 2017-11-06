@@ -15,7 +15,7 @@
 
 ## My First Function
 > Add function
-```
+```python
 def add(a, b):
     return a + b
 
