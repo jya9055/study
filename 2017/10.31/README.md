@@ -3,7 +3,7 @@
 ## Members
 1. sanghak,lee
 2. yangah, jo
-3. minkyeong, kim
+3. **this is kmk's homework**
 
 - 111
 - 111
