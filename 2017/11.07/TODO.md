@@ -9,13 +9,13 @@
 
     ```python
     def join(str):
-        // .. TODO
+        # .. TODO
         return 0
 
     strings = ['I', 'love', 'python !']
     result = join(strings)
 
-    print(result) // It will be: "I love python !"
+    print(result) # It will be: "I love python !"
     ```
 
 1. Python 코딩
@@ -28,7 +28,7 @@
 
     ```python
     def sum10(number):
-        // .. TODO
+        # .. TODO
         return 0
 
     one_to_ten = range(1,11)
