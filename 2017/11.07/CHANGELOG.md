@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### changed
 - `README.md`
     - 포스트맨 추가
+- 포스트맨 정보 추가
 
 ## [1.0.0] - 2017-11-06
 ### Added
