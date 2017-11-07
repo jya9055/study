@@ -12,7 +12,7 @@
 
 ## My first function 
 > Add function 
-```
+```python
 def add(a, b):
   result = a + b
   c = add(1, 2)
