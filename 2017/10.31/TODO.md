@@ -5,7 +5,7 @@
     - [GitHub Pull Request 날려보기](http://sanghaklee.tistory.com/30) 가능하면 이 블로그 보고 
     [`study/10.31/README.md`](https://github.com/Yokan-Study/study/blob/master/2017/10.31/README.md)의 Members에 자신의 이름 써서 수정 후 PR 날려보기
 
-1. Python 프로그래밍
+1. Python 프로그래밍hh
     - 더하기 함수 만들기
     - 파라미터 2개를 받는 함수를 작성
     - 함수의 이름은 `Add`
