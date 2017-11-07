@@ -3,7 +3,6 @@
 ## Members
 - sanghak,lee
 - Minkyeong Kim
-- **Remove and edit here, your name**
 
 
 ## Git
