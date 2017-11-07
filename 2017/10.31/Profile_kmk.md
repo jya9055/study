@@ -13,6 +13,8 @@
 ## My first function 
 > Add function 
 ```
-Add (a, b):
-// EDIT HERE
+def add(a, b):
+  result = a + b
+  c = add(1, 2)
+  print(c)
 ```
