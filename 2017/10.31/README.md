@@ -1,9 +1,9 @@
 # 2017.10.31
 
 ## Members
-- sanghak,lee
-- Minkyeong Kim
-- **Remove and edit here, your name**
+1. sanghak,lee
+2. yangah, jo
+3. Minkyeong Kim
 
 
 ## Git
