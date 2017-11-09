@@ -4,7 +4,7 @@ import unittest
 import lshJoin
 import lshSum10
 
-class lshTest(unittest.TestCase):
+class lshTests(unittest.TestCase):
     def test_join(self):
         str = ['I', 'love', 'python !']
         result = lshJoin.join(str)
