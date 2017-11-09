@@ -9,13 +9,13 @@
 
     ```python
     def join(str):
-        # .. TODO
-        return 0
+        str[0] + ' ' + str[1] + ' ' + str[2]
+        return result
 
     strings = ['I', 'love', 'python !']
     result = join(strings)
 
-    print(result) # It will be: "I love python !"
+    print(result)
     ```
 
 1. Python 코딩
