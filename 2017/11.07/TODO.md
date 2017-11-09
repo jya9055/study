@@ -7,16 +7,14 @@
     - 넘어온 리스트 자료형에 담긴 문자들을 하나로 합쳐서 리턴
     - 리턴은 [문자열 자료형](https://wikidocs.net/13)인 **"I love python !"**
 
-    ```python
     def join(str):
-        str[0] + ' ' + str[1] + ' ' + str[2]
-        return result
+        # .. TODO
+        return 0
 
     strings = ['I', 'love', 'python !']
     result = join(strings)
 
-    print(result)
-    ```
+    print(result) # It will be: "I love python !"
 
 1. Python 코딩
     - 1 ~ 10 까지 더하기
