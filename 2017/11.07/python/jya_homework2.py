@@ -1,14 +1,14 @@
 ```python
 
-i = -1
-sum = 0
+def sum10(number):
+	sum = 0
+	for i in number:
+		sum += i
+	return sum
 
-one_to_ten = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+one_to_ten = range(1,11)
+result = sum10(one_to_ten)
 
-while i < 10:
-	i += 1
-	sum += one_to_ten[i]
-
-print(sum)
+print(result)
 
 ```
