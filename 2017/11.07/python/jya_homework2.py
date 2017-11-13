@@ -1,5 +1,3 @@
-```python
-
 def sum10(number):
 	sum = 0
 	for i in number:
@@ -10,5 +8,3 @@ one_to_ten = range(1,11)
 result = sum10(one_to_ten)
 
 print(result)
-
-```
