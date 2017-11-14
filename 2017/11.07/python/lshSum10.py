@@ -8,4 +8,4 @@ def sum10(number):
 one_to_ten = range(1,11)
 result = sum10(one_to_ten)
 
-print(result) # It will be: 55
+print(result) 
