@@ -8,7 +8,7 @@
 파이썬 패키지 관리자
 
 ##### package
-![package](http://weknowyourdreams.com/images/package/package-12.jpg
+![package](http://weknowyourdreams.com/images/package/package-12.jpg)
 > 실행 가능한 완성된 S/W 묶음
 
 ##### package manager
