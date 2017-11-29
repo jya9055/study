@@ -1,10 +1,29 @@
 # 2017.10.31
 
 ## Members
+<<<<<<< HEAD
 - sanghak,lee
 - yangah, Jo
 - minkyeong, Kim
+=======
+1. sanghak,lee
+2. yangah, jo
+3. Minkyeong Kim
+>>>>>>> dd8f92f8852195ca0bf94b599752a0f05c794021
 
+**`Good job!!`**
+
+- 111
+- 111
+
+> 인용구문
+
+```python
+def add(a, b):
+    return a + b
+```
+
+[링크](http://www.naver.com)
 
 ## Git
 ### Try Git!
