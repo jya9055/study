@@ -5,6 +5,6 @@ from openpyxl import load_workbook
 wb = load_workbook('../datas/daily_gabia_20171127.xlsx')
 ws = wb.active
 
-ws['E4:E10'] =+ 2
+ws['E4:E10'.value] =+ 2
 
 wb.save('../datas/jya-edit.xlsx')
