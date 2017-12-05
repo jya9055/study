@@ -5,4 +5,4 @@ ws = wb.active
 
 ws['A1'] = jya9055
 
-wb.save(..datas/jya-save.xlsx)
+wb.save(.datas/jya-save.xlsx)
