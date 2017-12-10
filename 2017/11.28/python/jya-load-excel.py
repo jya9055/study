@@ -3,7 +3,7 @@ from openpyxl import load_workbook
 wb = load_workbook('../datas/daily_gabia_20171127.xlsx')
 ws = wb.active
 
-print('{0}'.format(ws['A1'].value) )
+print('A1 = ' + ws['A1'].value)
 
 A = ws['A4':'L4']
 
