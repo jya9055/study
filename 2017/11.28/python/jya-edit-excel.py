@@ -5,51 +5,22 @@ from openpyxl import load_workbook
 wb = load_workbook('../datas/daily_gabia_20171127.xlsx')
 ws = wb.active
 
-def edit(a):
-    return  a + 2
 
+# 환불 데이터 가져오기
+for r in ws.rows:
+    row_idx = r[4].row
+    k = r[4].value
+    if k in [2, 0, 12, 21, 8, 18]: 
+        # 위 조건이 없을 경우, E1, E2, E3이 숫자가 아니어서 오류가 남
+        # if k in int 처럼 정수면 더하라는 조건을 추가하고 싶었으나, 못 찾아서 위처럼 처리
+        p = k + 2
 
-c1 = ws['E4']
-d = c1.value
-k = edit(d)
-ws['E4'] = k
+        # 2 더한 값 넣기
+        ws.cell(row = row_idx, column=5).value = p
+        # 근데 r[4]랑 column=5는 같은 의미 아닌가요???
 
-c2 = ws['E5']
-d = c2.value
-k = edit(d)
-ws['E5'] = k
+    else: #else일 때 그냥 넘어가는 걸 어떻게 쓰나요??? 
+        print("ddd")
 
-c3 = ws['E6']
-d = c3.value
-k = edit(d)
-ws['E6'] = k
-
-c4 = ws['E7']
-d = c4.value
-k = edit(d)
-ws['E7'] = k
-
-c5 = ws['E8']
-d = c5.value
-k = edit(d)
-ws['E8'] = k
-
-c6 = ws['E9']
-d = c6.value
-k = edit(d)
-ws['E9'] = k
-
-c7 = ws['E10']
-d = c7.value
-k = edit(d)
-ws['E10'] = k
-
-##A = ws['E4':'E10']
-#for t in A:
-#    for c in t:
-#        d = c.value
-#        t = edit(d)
-#        for i in range (0, 7):
-#            A[i] = t
 
 wb.save('../datas/daily_gabia_20171127_edit.xlsx')
