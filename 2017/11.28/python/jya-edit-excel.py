@@ -19,7 +19,7 @@ for r in ws.rows:
         ws.cell(row = row_idx, column=5).value = p
         # 근데 r[4]랑 column=5는 같은 의미 아닌가요???
 
-    else: #else일 때 그냥 넘어가는 걸 어떻게 쓰나요??? 
+    else: #else일 때 그냥 넘어가는 걸 어떻게 쓰나요??? return만 쓰면 빠져나온다고 했는데 outside function 오류남
         print("ddd")
 
 
