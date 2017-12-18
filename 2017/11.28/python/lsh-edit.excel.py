@@ -1,11 +1,9 @@
-# Let do it!
 from openpyxl import load_workbook
 from openpyxl.utils import column_index_from_string
 
 
 wb = load_workbook('../datas/daily_gabia_20171127.xlsx') # 엑셀 열기
 ws = wb.active # 현재 워크시크 가져오기
-
 
 E = ws['E4':'E10'] 
 
