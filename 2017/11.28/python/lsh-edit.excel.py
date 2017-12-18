@@ -1,14 +1,11 @@
 # Let do it!
 from openpyxl import load_workbook
-<<<<<<< HEAD
-=======
 from openpyxl.utils import column_index_from_string
->>>>>>> 92e6a8584a1d009ff40d8b71cc46089abe12e687
+
 
 wb = load_workbook('../datas/daily_gabia_20171127.xlsx') # 엑셀 열기
 ws = wb.active # 현재 워크시크 가져오기
 
-<<<<<<< HEAD
 
 E = ws['E4':'E10'] 
 
@@ -22,7 +19,7 @@ for t in E: # ( (), () )
         ws.cell(row=row_idx, column=column_idx).value = c.value + 2
 
 wb.save('../datas/lsh-edit2.xlsx') # 엑셀 파일 저장
-=======
+
 # 1. 이중 for문이 불필요하다는 사실 인지. ws.cell은 행,열만 알면되는데 첫번째 for 문에서 다 알 수 있기 때문에
 # 2. 상수로 선언했던 `column_idx = 5`를 변수로 처리할 방법 찾음. `E`라는 문자열 인덱스를 숫자형 인데스로 변환하는 column_index_from_string를 찾음
 # 3. 내부 로직에 +2 라는 상수만 남음 +2 라는 상수도 변수 처리하면 순수 함수 생성 가능
@@ -41,5 +38,4 @@ E = ws['E4':'E10']
 edit(E, 3)
 
 wb.save('../datas/lsh-edit.xlsx') # 엑셀 파일 저장
->>>>>>> 92e6a8584a1d009ff40d8b71cc46089abe12e687
 wb.close()
