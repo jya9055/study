@@ -1,13 +1,16 @@
 import requests
 
-params = {'name':'', 'blog':''}
-r = requests.get('https://api.github.com', params=params)
-r.jason()
+#params = {'name':'', 'blog':''}
+r = requests.get('https://api.github.com/users/jya9055')
+j = r.json()
 
-def getUser('name', 'blog'):
-    return 이름 + "/" + 블로그
-    if 'name' == '':
-        return login
-    if 'blog' == '':
-        return html_url
+def getUser(id):
+    return j['name'] + "/" + j['blog']
+    if j['name'] == '':
+        return j['login']
+    if j['blog'] == '':
+        return j['html_url']
+
+d = getUser(id)
+print(d)
 
