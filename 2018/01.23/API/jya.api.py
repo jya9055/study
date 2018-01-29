@@ -2,7 +2,11 @@ import requests
 
 
 
-def getprice(coin):
+def getprice(coin): 
+    # coin 파라미터  사용!
+    # https://api.coinnest.co.kr/api/pub/ticker?coin=eth
+    # https://api.coinnest.co.kr/api/pub/ticker?coin={변수}
+    # .format()
     r = requests.get('https://api.coinnest.co.kr/api/pub/ticker')
     j = r.json()
 	coin = j["coin"]
