@@ -1,23 +1,15 @@
 import requests
 
-def getPrice(A): 
-    # coin 파라미터  사용!
-    # https://api.coinnest.co.kr/api/pub/ticker?coin=eth
-    # https://api.coinnest.co.kr/api/pub/ticker?coin={변수}
-    # .format()
-
-	#. 문자형 .format() 인자값
-	#. () 안에 들어오는 코인은 정해져 있고, 정해진 코인이 아닐 경우 false 리턴
-	#. 정해진 코인을 입력한 경우, 해당 코인의 마지막 가격을 리턴
-	
-	r = requests.get('https://api.coinnest.co.kr/api/pub/ticker?coin={coin}'.format(A))
+def getPrice(coin):
+	A = ['btc','bch','btg','bcd','ubtc','eth','etc','ada','qtum','xlm','neo','gas','rpx','hsr','knc','tsl','tron','omg','wtc','mco','storm','gto','pxs','chat','ink','hlc','ent','qbt','spc','put']
+	if coin not in A:
+		return 'false'
+	r = requests.get('https://api.coinnest.co.kr/api/pub/ticker/?coin={0}'.format(coin))
 	j = r.json()
-	A = j['coin']
-	if A not in coin:
-		return "false"
-	else:
-		return j["last"]
+	last = j['last']
+	return last
 
-a = getPrice(qtum)
-print(a)
-
+# 확인해보기
+a = getPrice('btc')
+b = getPrice('dbc')
+print(a, b)
