@@ -17,6 +17,8 @@ p = 'planning_d'
 A = getMember(p)
 # print(A)
 
+# 리스트로 넘어온 user_id를 이용해 여러명의 이름 정보 가져와서 리스트로 만들어주는 getMembers() 만들기
+
 def getMembers(user_ids):
     # return user_ids
     members = []
@@ -27,7 +29,7 @@ def getMembers(user_ids):
     return members
 
 
-# 리스트로 넘어온 user_id를 이용해 여러명의 이름 정보 가져와서 리스트로 만들어주는 getMembers() 만들기
+
 # ['planning_d', 'test1gabia']
 
 # return members
