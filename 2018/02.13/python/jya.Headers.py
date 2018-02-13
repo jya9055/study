@@ -8,12 +8,9 @@ def getToken():
     return token
 
 print (getToken())
-p = getToken()
 
 def makeHeadersAuth(token):   
-    token = getToken()
     auth = btoa('www_front:{0}'.format(token))
     print(auth)
     return {'Authorization': 'Basic {0}'.format(auth)}
 
-def mak
