@@ -1,5 +1,18 @@
 # 2018.02.13
 
+## base64
+https://ko.wikipedia.org/wiki/%EB%B2%A0%EC%9D%B4%EC%8A%A464
+
+```javascript
+btoa('lsh') 
+atob('bHNo')
+```
+
+### python base64
+https://docs.python.org/3.5/library/base64.html
+
+---
+
 ## <목표>
 ```
 62번 템플릿을 이용하여 수동 메일 발송하기
