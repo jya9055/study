@@ -9,27 +9,27 @@
 
 1. 메일 발송을 위해 필요한 정보
 
-	- 1) 회원 이름 - {hanname}
-	- 2) 작성일 - {regist_date}
-	- 3) 서비스명 - {service_name}
-	- 4) 도메인 - {domain}
-	- 5) 만기일 - {expiration_date}
-	- 6) 기준 금액 - {extension_expense}
-	- 7) 연장 가능 기한 - {extendable_limit}
-	- 8) 총 서비스 건수 - {total_count}
+	- 회원 이름 - {hanname}
+	- 작성일 - {regist_date}
+	- 서비스명 - {service_name}
+	- 도메인 - {domain}
+	- 만기일 - {expiration_date}
+	- 기준 금액 - {extension_expense}
+	- 연장 가능 기한 - {extendable_limit}
+	- 총 서비스 건수 - {total_count}
 
 
 2. 필수 입력 정보
 
-	- [회원 ID] → 1) 회원 이름 
-	- [서비스 번호] → 3) 서비스명, 4) 도메인, 5) 만기일, 6) 기준 금액
+	- [회원 ID] → 회원 이름 
+	- [서비스 번호] → 서비스명, 도메인, 만기일, 기준 금액
 
 
 3. 자동 입력 정보
 
-	- [2) 작성일]
-	- [7) 연장 가능 기한]
-	- [8) 총 서비스 건 수]
+	- 작성일
+	- 연장 가능 기한
+	- 총 서비스 건 수
 
 
 
