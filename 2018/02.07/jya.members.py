@@ -12,3 +12,14 @@ def getMember(id):
 p = 'planning_d'
 A = getMember(p)
 print(A)
+
+
+def getMembers(*user_ids):
+    members = []
+    for i in user_ids:
+        members = members.append(i)
+    return members
+
+k = [getMember('planning_d'), getMember('test1gabia')]
+L = getMembers(k)
+print(L)
