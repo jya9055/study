@@ -1,4 +1,4 @@
-import requests
+import requests, base64
 
 
 def getToken():
@@ -9,8 +9,20 @@ def getToken():
 
 print (getToken())
 
-def makeHeadersAuth(token):   
-    auth = btoa('www_front:{0}'.format(token))
-    print(auth)
-    return {'Authorization': 'Basic {0}'.format(auth)}
+def makeHeadersAuth(token):
+    encoded_text = {0}.encode('base64').format(token)
+    # 'set' object has no attribute 'encode' 이런 오류가 계속 남 ㅜㅜ
+    return 'Basic {0}'.format(encoded_text)
 
+
+token = 'NDBhZmE5NTEzYzA3N2Q1ZWY2Yzc5ZGJjN2U2MmQ5'
+k = makeHeadersAuth(token)
+print(k)
+# 프린트 실패
+
+# 한 번에 처리하는 함수 만들기
+def encoded_token():
+    return makeHeadersAuth(getToken())
+
+# 함수 실행하기?
+encoded_token()
