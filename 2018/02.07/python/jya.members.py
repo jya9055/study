@@ -1,5 +1,5 @@
 import requests
-headers = {'Authorization': 'Basic {key}'}
+headers = {'Authorization': 'Basic d3d3X2Zyb250OlpUYzJZMlV4TmpBMFlUTTVPVEF6T0dReU1UazVPR1l4WW1SbU5EaGs='}
 
 #1명의 회원 이름 정보 가져오는 함수 getMember() 만들기
 
