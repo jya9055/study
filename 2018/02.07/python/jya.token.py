@@ -1,6 +1,6 @@
 import requests
 
-data = {'client_id': 'www_front', 'client_secret': 'eoqhfma', 'grant_type': 'client_credentials'}
+data = {'client_id': '', 'client_secret': '', 'grant_type': ''}
 
 r = requests.post('https://gapi.gabia.com/oauth/token', data=data)
 # print(r)

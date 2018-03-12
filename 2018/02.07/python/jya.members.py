@@ -1,5 +1,5 @@
 import requests
-headers = {'Authorization': 'Basic d3d3X2Zyb250OlpUYzJZMlV4TmpBMFlUTTVPVEF6T0dReU1UazVPR1l4WW1SbU5EaGs='}
+headers = {'Authorization': 'Basic d3d3X2Zyb250Ok1UYzFaREprT1RVME5tUmpPVFU0TURGaU9UWTJOamRoWkRJMk1qaGg='}
 
 #1명의 회원 이름 정보 가져오는 함수 getMember() 만들기
 
@@ -40,3 +40,7 @@ def getMembers(user_ids):
 q = ['planning_d', 'test1gabia', 'dalimix', 'jya9055', 'abc', 1]
 B = getMembers(q)
 print(B)
+
+
+deleteorder = requests.delete('https://gapi.gabia.com/payments/cancel/account/?ordernum=REG20180308-118183D&user_id=planning_d')
+delete = deleteorder.json()
