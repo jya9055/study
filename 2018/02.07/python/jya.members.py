@@ -1,6 +1,5 @@
 import requests
-headers = {'Authorization': 'Basic d3d3X2Zyb250Ok1UYzFaREprT1RVME5tUmpPVFU0TURGaU9UWTJOamRoWkRJMk1qaGg='}
-
+headers = {'Authorization': ''}
 #1명의 회원 이름 정보 가져오는 함수 getMember() 만들기
 
 def getMember(id):
@@ -13,9 +12,9 @@ def getMember(id):
     return hanname
     # hanname = j['client_info']['hanadmin'] # j.client_info.hanadmin
 
-p = 'planning_d'
-A = getMember(p)
-# print(A)
+# p = 'planning_d'
+# A = getMember(p)
+# # print(A)
 
 # 리스트로 넘어온 user_id를 이용해 여러명의 이름 정보 가져와서 리스트로 만들어주는 getMembers() 만들기
 
@@ -37,10 +36,6 @@ def getMembers(user_ids):
 # L = getMembers(k)
 # print(L)
 
-q = ['planning_d', 'test1gabia', 'dalimix', 'jya9055', 'abc', 1]
-B = getMembers(q)
-print(B)
-
-
-deleteorder = requests.delete('https://gapi.gabia.com/payments/cancel/account/?ordernum=REG20180308-118183D&user_id=planning_d')
-delete = deleteorder.json()
+# q = ['planning_d', 'test1gabia', 'dalimix', 'jya9055', 'abc', 1]
+# B = getMembers(q)
+# print(B)

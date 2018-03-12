@@ -8,7 +8,7 @@ def getToken():
     token_2 = 'www_front:{0}'.format(token_1) # 크롬에서 btoa 했을 때 'www_front:{토큰}'을 넣었으니까 이렇게 해야하지 않나..?
     return token_2
 
-print (getToken())
+# print (getToken())
 
 def makeHeadersAuth(token):
     encoded_text = token.encode()
@@ -24,5 +24,5 @@ def encoded_token():
 
 
 # 함수 실행하기
-p = encoded_token()
-print(p)
+# p = encoded_token()
+# print(p)

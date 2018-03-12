@@ -9,5 +9,5 @@ def getToken():
     token = j['access_token']
     return token
 
-p = getToken()
-print(p)
+# p = getToken()
+# print(p)
