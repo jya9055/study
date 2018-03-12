@@ -17,12 +17,6 @@ def makeHeadersAuth(token):
     return 'Basic {0}'.format(l)
 
 
-# 테스트
-token = 'www_front:NDBhZmE5NTEzYzA3N2Q1ZWY2Yzc5ZGJjN2U2MmQ5'
-k = makeHeadersAuth(token)
-print(k)
-# 프린트 성공!!!
-
 
 # 한 번에 처리하는 함수 만들기
 def encoded_token():
