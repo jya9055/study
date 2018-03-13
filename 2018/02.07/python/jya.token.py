@@ -1,11 +1,8 @@
-import requests, configparser
+import requests, config
 
-config = configparser.ConfigParser()
-config.read('../../config.ini')
-
-id = config['gAPI']['client_id']
-secret = config['gAPI']['client_secret']
-type = config['gAPI']['grant_type']
+id = config.GAPI_CONFIG['client_id']
+secret = config.GAPI_CONFIG['client_secret']
+type = config.GAPI_CONFIG['grant_type']
 
 data = {'client_id': '{0}', 'client_secret': '{1}', 'grant_type': '{2}'.format(id, secret, type)}
 
