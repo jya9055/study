@@ -11,12 +11,12 @@ secret = config['gAPI']['client_secret']
 type = config['gAPI']['grant_type']
 
 def getToken():
-    r = requests.post('https://gapi.gabia.com/oauth/token', data={'client_id': '{0}', 'client_secret': '{1}', 'grant_type': '{2}'.format(id, secret, type)})
+    r = requests.post('https://gapi.gabia.com/oauth/token', data={'client_id': id, 'client_secret': secret, 'grant_type': type})
     j = r.json()
     token = j['access_token']
     return token
 
-p = getToken()
-print(p)
+# p = getToken()
+# print(p)
 
 
