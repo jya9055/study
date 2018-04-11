@@ -8,7 +8,6 @@ type = config.GAPI_CONFIG['grant_type']
 class GapiClass:
     def __init__(self, host='https://gapi.gabia.com'):
         self.host = host
-        self.data = {'client_id': id, 'client_secret': secret, 'grant_type': type}
         self.headers = self.encoded_token()
 
     def Requests_get(self, url):
@@ -16,13 +15,13 @@ class GapiClass:
         j = r.json()
         return j
 
-    def Requests_post(self, url):
-        r = requests.post('{0}{1}'.format(self.host, url), data = self.data)
+    def Requests_post(self, url, data):
+        r = requests.post('{0}{1}'.format(self.host, url), data = data)
         j = r.json()
         return j
 
     def getToken(self):
-        j = self.Requests_post('/oauth/token')
+        j = self.Requests_post('/oauth/token', {'client_id': id, 'client_secret': secret, 'grant_type': type})
         token_1 = j['access_token']
         token_2 = 'www_front:{0}'.format(token_1) 
         return token_2
@@ -42,6 +41,6 @@ class GapiClass:
         return hanname
 
 # api1 = GapiClass()
-# a = api1.getMember('planning_d')
+# a = api1.getToken()
 # print(a)
 
