@@ -10,32 +10,32 @@ class GapiClass:
         self.host = host
         self.headers = self.encoded_token()
 
-    def Requests_get(self, url):
+    def __Requests_get(self, url):
         r = requests.get('{0}{1}'.format(self.host, url), headers = self.headers)
         j = r.json()
         return j
 
-    def Requests_post(self, url, data):
+    def __Requests_post(self, url, data):
         r = requests.post('{0}{1}'.format(self.host, url), data = data)
         j = r.json()
         return j
 
-    def getToken(self):
+    def __getToken(self):
         j = self.Requests_post('/oauth/token', {'client_id': id, 'client_secret': secret, 'grant_type': type})
         token_1 = j['access_token']
         token_2 = 'www_front:{0}'.format(token_1) 
         return token_2
 
-    def makeHeadersAuth(self, token):
+    def __makeHeadersAuth(self, token):
         encoded_text = token.encode()
         k = base64.b64encode(encoded_text)
         l = k.decode()
         return {'Authorization': 'Basic {0}'.format(l)}
 
-    def encoded_token(self):
+    def __encoded_token(self):
         return self.makeHeadersAuth(self.getToken())
 
-    def getMember(self, id):
+    def __getMember(self, id):
         j = self.Requests_get('/members?user_id={0}'.format(id))
         hanname = j['client_info']['hanadmin']
         return hanname
