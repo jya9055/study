@@ -40,7 +40,6 @@ class GapiClass:
         hanname = j['client_info']['hanadmin']
         return hanname
 
-api1 = GapiClass()
-a = api1.getMember('planning_d')
-print(a)
-
+# api1 = GapiClass()
+# a = api1.getMember('planning_d')
+# print(a)
