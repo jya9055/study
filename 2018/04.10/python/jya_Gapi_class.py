@@ -42,4 +42,5 @@ class GapiClass:
 
 # api1 = GapiClass()
 # a = api1.getMember('planning_d')
-# print(a)
+# if __name__ == "__main__":
+    # print(a)
