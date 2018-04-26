@@ -9,22 +9,16 @@ ws = wb.active
 
 instance = GapiClass()
 id_list = ['planning_d', 'test1gabia', 'jya9055']
-
-# for id in id_list:
-#     number = 0
-#     for k in (1, 2, 3):
-#         number = number + 1
-#         ws.cell(row=k, column=1).value = number
-#         ws.cell(row=k, column=2).value = instance.getMember(id)
-
 number = 0
-for k in (1, 2, 3):
-    number = number + 1
-    ws.cell(row=k, column=1).value = number
-    for id in id_list:
-        ws.cell(row=k, column=2).value = instance.getMember(id)
-        
+
+# 입력 받은 리스트의 수만큼 각 열에 번호 - 이름 입력
+
+while number < len(id_list):
+    id = id_list[number]
+    number += 1
+    ws.cell(row=number, column=1).value = number
+    ws.cell(row=number, column=2).value = instance.getMember(id)
+
+
 wb.save('../datas/hanname-excel.xlsx')
 
-
-# 내일 다시!!!
