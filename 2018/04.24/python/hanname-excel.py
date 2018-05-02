@@ -13,12 +13,17 @@ number = 0
 
 # 입력 받은 리스트의 수만큼 각 열에 번호 - 이름 입력
 
+ws.cell(row=1, column=1).value = '번호'
+ws.cell(row=1, column=2).value = '아이디'
+ws.cell(row=1, column=3).value = '이름'
+
 while number < len(id_list):
     id = id_list[number]
     number += 1
-    ws.cell(row=number, column=1).value = number
-    ws.cell(row=number, column=2).value = instance.getMember(id)
+    ws.cell(row=number+1, column=1).value = number
+    ws.cell(row=number+1, column=2).value = id
+    ws.cell(row=number+1, column=3).value = instance.getMember(id)
+
 
 
 wb.save('../datas/hanname-excel.xlsx')
-
