@@ -1,4 +1,5 @@
 from openpyxl import Workbook
+from openpyxl.styles import Alignment
 import sys
 sys.path.append('C:/Users/조양아/Documents/GitHub/study/2018/04.10/python')
 from jya_gAPIclass import GapiClass
@@ -18,6 +19,8 @@ while number < len(field_name_list):
     field = field_name_list[number]
     number += 1
     ws.cell(row=1, column=number).value = field
+    font = ws.cell(row=1, column=number)
+    font.alignment = Alignment(horizontal='center')
 
 number = 0
 
@@ -29,6 +32,8 @@ while number < len(id_list):
     ws.cell(row=number+1, column=1).value = number
     ws.cell(row=number+1, column=2).value = id
     ws.cell(row=number+1, column=3).value = instance.getMember(id)
+    font = ws.cell(row=number+1, column=1)
+    font.alignment = Alignment(horizontal='center')
 
 
 
