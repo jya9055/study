@@ -8,14 +8,20 @@ wb = Workbook()
 ws = wb.active
 
 instance = GapiClass()
+field_name_list = ['번호', '아이디', '이름']
 id_list = ['planning_d', 'test1gabia', 'jya9055']
 number = 0
 
-# 입력 받은 리스트의 수만큼 각 열에 번호 - 이름 입력
+# 필드명 입력
 
-ws.cell(row=1, column=1).value = '번호'
-ws.cell(row=1, column=2).value = '아이디'
-ws.cell(row=1, column=3).value = '이름'
+while number < len(field_name_list):
+    field = field_name_list[number]
+    number += 1
+    ws.cell(row=1, column=number).value = field
+
+number = 0
+
+# 리스트 입력 
 
 while number < len(id_list):
     id = id_list[number]
