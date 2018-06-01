@@ -235,7 +235,7 @@ mail_text = pystache.render(text, data)
 smtp = smtplib.SMTP('smtp.gmail.com', 587)
 smtp.ehlo()
 smtp.starttls()
-smtp.login('jya9055@gmail.com', 'diddk80756582!@#')
+smtp.login('jya9055@gmail.com', '{비밀번호}')
 
 msg = MIMEMultipart('alternative')
 msg.attach(MIMEText(mail_text, 'html'))
