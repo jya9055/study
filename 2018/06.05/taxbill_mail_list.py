@@ -2,6 +2,7 @@ import os
 import shutil
 from datetime import datetime
 
+
 # 파일/디렉토리 생성에 필요한 내용 추출하기
 year = datetime.today().year # 년도
 month = datetime.today().month # 메일 발송월
@@ -34,7 +35,7 @@ else:
 # last_month를 저장하는 방식을 m이 아닌 mm으로 변경하고 싶은데 방식을 못찾겠음 ㅠ 일단 이렇게 진행
 
 file_asis = '/Users/조양아/Downloads/{0}'.format(file_name)
-file_path_tobe = '/Users/조양아/Desktop/마케팅실/세금계산서/2018/{0}월'.format(month)
+file_path_tobe = '/Users/조양아/Desktop/마케팅실/세금계산서/2018/{0}월'.format(last_month)
 
 if os.path.isfile(file_asis):
     shutil.copy(file_asis, file_path_tobe)
