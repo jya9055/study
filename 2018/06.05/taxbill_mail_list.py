@@ -1,12 +1,18 @@
 import os
 import shutil
-from datetime import datetime
+from datetime import datetime, date
 
 
 # 파일/디렉토리 생성에 필요한 내용 추출하기
 year = datetime.today().year # 년도
-month = datetime.today().month # 메일 발송월
-last_month = month-1 #세금계산서 발행월
+month = date.today().strftime('%m') # 메일 발송월
+
+if (int(month) == 1):
+	last_month = 12
+elif int(month) in [11, 12]:
+	last_month = int_month-1
+else:
+	last_month = '0' + str(int(month)-1)
 
 
 # 테스트 메일 발송 대상 만들기
@@ -28,11 +34,8 @@ f.close()
 
 
 # 인증후에서 다운로드한 실제 발송 대상 엑셀 파일 가져오기
-if (last_month <10):
-	file_name = 'taxbill_list_{0}-0{1}.xls'.format(year, last_month)
-else:
-	file_name = 'taxbill_list_{0}-{1}.xls'.format(year, last_month)
-# last_month를 저장하는 방식을 m이 아닌 mm으로 변경하고 싶은데 방식을 못찾겠음 ㅠ 일단 이렇게 진행
+
+file_name = 'taxbill_list_{0}-{1}.xls'.format(year, last_month)
 
 file_asis = '/Users/조양아/Downloads/{0}'.format(file_name)
 file_path_tobe = '/Users/조양아/Desktop/마케팅실/세금계산서/2018/{0}월'.format(last_month)
