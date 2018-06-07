@@ -50,3 +50,16 @@ make_HTML_file = '/Users/조양아/Desktop/마케팅실/세금계산서/2018/{0}
 f = open(make_HTML_file, 'w')
 f.write(mail_text)
 f.close()
+
+
+# www 공지글 자동으로 넣어주기
+notice_path = '/Users/조양아/Desktop/마케팅실/세금계산서/www_notice.txt'
+with open(notice_path) as notice:
+	notice_text = notice.read()
+
+www_notice_text = pystache.render(notice_text, data)
+
+make_txt_file = '/Users/조양아/Desktop/마케팅실/세금계산서/2018/{0}월/{0}m_www_notice.txt'.format(last_month)
+f = open(make_txt_file, 'w')
+f.write(www_notice_text)
+f.close()
