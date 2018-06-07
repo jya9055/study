@@ -47,10 +47,10 @@ class GapiClass:
         
     def sendMail(self, title, contents, email, name):
         data = {
-        'title': '{0}'.format(title),
-        'contents': '{0}'.format(contents),
-        'arr_email':'{0}'.format(email),
-        'arr_name':'{0}'.format(name),
+        'title': title,
+        'contents': contents,
+        'arr_email': email,
+        'arr_name': name,
         'arr_personal':'',
         'sender_email':'notice_noreply@gabia.net',
         'sender_name':'가비아',
@@ -61,6 +61,10 @@ class GapiClass:
         j = self.__Requests_post2('/ems', data)
 
 # api1 = GapiClass()
-# a = api1.sendMail('jya@gabia.com', '조양아')
+# title = '타이틀'
+# contents = '콘텐츠'
+# email = ['jya@gabia.com','jya9055@gmail.com']
+# name = ['조양아', '조양']
+# a = api1.sendMail(title, contents, email, name)
 # if __name__ == "__main__":
 #     print(a)

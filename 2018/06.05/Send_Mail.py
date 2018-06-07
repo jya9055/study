@@ -221,6 +221,8 @@ data = {
 pystache.defaults.DELIMITERS = ('{', '}') 
 mail_text = pystache.render(text, data)
 mail_title = '[가비아] 서비스 이용 기간을 연장해 주세요'
+email = ['jya@gabia.com','jya9055@gmail.com','hsnja111@naver.com']
+name = ['조양아', '조양아','조양아']
 
 instance = GapiClass()
-instance.sendMail(mail_title , mail_text, 'jya@gabia.com', '조양아')
+instance.sendMail(mail_title , mail_text, email, name)
