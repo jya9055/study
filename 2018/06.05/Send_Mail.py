@@ -194,31 +194,24 @@ text = '''
 '''
 
 data = {
-    'hanname':'%회원이름%',
-    'regist_date':'%작성일%',
+    'hanname':'가비아',
+    'regist_date':'2018-06-07',
     'service_list':[
-        {'service_name':'%서비스명%',
-        'domain':'%도메인%',
-        'expiration_date':'%만기일%',
-        'extension_expense':'%기준 가격%',
-        'extension_period':'%기준 기간%',
-        'extendable_limit':'%n%'
+        {'service_name':'도메인',
+        'domain':'gabia.com',
+        'expiration_date':'2018-08-08',
+        'extension_expense':'22,000원',
+        'extension_period':'년',
+        'extendable_limit':'50'
         },
-         {'service_name':'%서비스명%',
-        'domain':'%도메인%',
-        'expiration_date':'%만기일%',
-        'extension_expense':'%기준 가격%',
-        'extension_period':'%기준 기간%',
-        'extendable_limit':'%n%'
-        },
-         {'service_name':'%서비스명%',
-        'domain':'%도메인%',
-        'expiration_date':'%만기일%',
-        'extension_expense':'%기준 가격%',
-        'extension_period':'%기준 기간%',
-        'extendable_limit':'%n%'
+         {'service_name':'웹호스팅',
+        'domain':'gabia.com',
+        'expiration_date':'2018-08-08',
+        'extension_expense':'35,000원',
+        'extension_period':'월',
+        'extendable_limit':'50'
         }],
-    'total_count':'3'
+    'total_count':'2'
 }
 
 # data dictionary에 value에 해당하는 값을 DB에서 불러와야 함
@@ -227,7 +220,7 @@ data = {
 
 pystache.defaults.DELIMITERS = ('{', '}') 
 mail_text = pystache.render(text, data)
-# print(mail_text)
+mail_title = '[가비아] 서비스 이용 기간을 연장해 주세요'
 
 instance = GapiClass()
-instance.sendMail('제목', mail_text, 'jya@gabia.com', '조양아')
+instance.sendMail(mail_title , mail_text, 'jya@gabia.com', '조양아')
