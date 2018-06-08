@@ -49,8 +49,8 @@ class GapiClass:
         data = {
         'title': title,
         'contents': contents,
-        'arr_email': email,
-        'arr_name': name,
+        'arr_email[]': email,
+        'arr_name[]': name,
         'arr_personal':'',
         'sender_email':'notice_noreply@gabia.net',
         'sender_name':'가비아',
@@ -64,7 +64,7 @@ class GapiClass:
 # title = '타이틀'
 # contents = '콘텐츠'
 # email = ['jya@gabia.com','jya9055@gmail.com']
-# name = ['조양아', '조양']
+# name = ['조양아', '조양아']
 # a = api1.sendMail(title, contents, email, name)
 # if __name__ == "__main__":
 #     print(a)
