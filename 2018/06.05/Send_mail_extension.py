@@ -31,7 +31,7 @@ data = {
     'total_count':'2'
 }
 # data dictionary에 value에 해당하는 값을 DB에서 불러와야 함 
-# 혹은 UI에서 수동으로 입력
+# 혹은 터미널/UI에서 수동으로 입력
 
 
 pystache.defaults.DELIMITERS = ('{', '}') 
@@ -42,10 +42,8 @@ email = ['jya9055@gmail.com','hsnja111@naver.com','jya@gabia.com']
 
 # 이메일 수만큼 이름 추가하기. 메일 리스트와 이름 리스트 개수가 동일해야 발송 가능함
 name = []
-k = 0
-while k < len(email):
+for i in email:
     name.append('가비아 회원')
-    k += 1
 
 instance = GapiClass()
 instance.sendMail(mail_title , mail_text, email, name)

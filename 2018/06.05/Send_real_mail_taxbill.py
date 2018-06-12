@@ -31,10 +31,8 @@ with open(real_email) as list:
 
 # 이메일 수만큼 이름 추가하기. 메일 리스트와 이름 리스트 개수가 동일해야 발송 가능함
 name = []
-k = 0
-while k < len(email):
+for i in email:
     name.append('가비아 회원')
-    k += 1
 
 
 # 메일 발송하기
