@@ -4,7 +4,7 @@ import xmltodict
 import json
 with urllib.request.urlopen("http://admin2.gabia.com/voc/improve/getData/service_imp_list_data.php") as url:
  
-r = url.read()
+    r = url.read()
  
 h = r.decode("euc-kr")
 g = xmltodict.parse(h)
@@ -17,15 +17,14 @@ j = json.loads(json.dumps(g))
 board_seqno = []
 seqno = []
 row = j['rows']['row']
+
 for w in row:
-o = w['cell'][7]
-p = w['@id']
-#print(o)
- 
-if o == '최선애':
-k = w['userdata']['#text']
+    o = w['cell'][7]
+    p = w['@id']
+    if o == '최선애':
+        k = w['userdata']['#text']
+        q = w['@id']
 #print(k)
-q = w['@id']
 #print(q)
 seqno.append(k)
 board_seqno.append(q)
@@ -56,8 +55,8 @@ print("제목: " + voc_title)
  
 import re
 def remove_tag(content):
-cleanr =re.compile('<.*?>')
-cleantext = re.sub(cleanr, '', content)
-return cleantext
+    cleanr =re.compile('<.*?>')
+    cleantext = re.sub(cleanr, '', content)
+    return cleantext
  
 print(remove_tag(voc_body))
