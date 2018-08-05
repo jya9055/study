@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>연장 알림 메일 수동 발송
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+<body>
+    <h1>메일 발송에 필요한 정보를 입력하세요</h1>
+    <form action = "#" name = "mail_contents">
+        <fieldset style = "width:150">
+            <legend>메일 콘텐츠</legend>
+            회원 이름:<br>
+            <input type="text" name="회원 이름"><br>
+            서비스명:<br>
+            <input type="text" name="서비스명"><br>
+            도메인:<br>
+            <input type="text" name="도메인"><br>
+            서비스명:<br>
+            <input type="text" name="서비스명"><br>
+            만기일:<br>
+            <input type="date" name="만기일"><br>
+            기준 금액:<br>
+            <input type="text" name="기준 금액"><br>
+            기준 기간:<br>
+            <input type="text" name="기준 기간"><br>
+            연장 가능 기한:<br>
+            <input type="text" name="연장 가능 기한"><br><br>
+        </fieldset>
+    </form><br>
+    <form action = "#" name = "mail_info">
+            <fieldset style = "width:150">
+                <legend>메일 콘텐츠</legend> 
+                메일 제목:<br>
+                <input type="text" name="회원 이름"><br>
+                메일 내용:<br>
+                <input type="text" name="서비스명"><br>
+                이메일 주소:<br>
+                <input type="email" name="이메일"><br>
+                이름:<br>
+                <input type="text" name="이름"><br>
+                </fieldset>
+    </form><br>
+    <form action = "/send" name = "send">
+        <input type="submit" value="발송하기">
+    </form>
+</body>
+</html>
