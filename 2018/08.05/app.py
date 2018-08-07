@@ -1,5 +1,6 @@
 from flask import Flask
 from flask import render_template
+from jya_gAPIclass import GapiClass
 
 app = Flask(__name__)
 
@@ -9,7 +10,8 @@ def mail():
 
 @app.route('/send')
 def send():
-    return
+    instance = GapiClass()
+	instance.sendMail(mail_title , mail_text, email, name)
 
 if __name__ == '__main__':
 	app.run()
