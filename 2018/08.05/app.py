@@ -1,14 +1,22 @@
 from flask import Flask, render_template, request
 from jya_gAPIclass import GapiClass
+from datetime import date
 import pystache
 import codecs
 
 app = Flask(__name__)
 
+@app.route('/')
+def index():
+	return render_template('index.html')
+
 @app.route('/mail')
 def mail():
 	return render_template('form.html')
 
+@app.route('/tax')
+def taxmail():
+	return 'To be Continued'
 
 @app.route('/result', methods=['POST'])
 def result():
@@ -16,14 +24,14 @@ def result():
 		# /mail에서 입력 받은 변수 가져오기
 		k = request.form
 		hanname = k['hanname']
-		regist_date = k['regist_date']
+		regist_date = date.today().strftime('%Y-''%m-''%d')
 		service_name = k['service_name']
 		domain = k['domain']
 		expiration_date = k['expiration_date']
 		extension_expense = k['extension_expense']
 		extension_period = k['extension_period']
 		extendable_limit = k['extendable_limit']
-		total_count = k['total_count']
+		total_count = 1
 		mail = k['이메일']
 		
 		# 메일 콘텐츠에 변수 넣어주기
@@ -55,4 +63,4 @@ def send():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()

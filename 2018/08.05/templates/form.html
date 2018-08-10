@@ -6,39 +6,74 @@
     <title>연장 알림 메일 수동 발송
     </title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <script src="main.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="../../../css/bootstrap.min.css" />
+    <script src="../../../js/bootstrap.js"></script>
 </head>
 <body>
     <h1>메일 발송에 필요한 정보를 입력하세요</h1>
-    <form action = "http://localhost:5000/result" method = "POST">
+    <form action = "/result" method = "POST">
         <fieldset style = "width:150">
             <legend>메일 콘텐츠</legend>
             회원 이름:<br>
-            <input type="text" name="hanname"><br>
-            작성일:<br>
-            <input type="text" name="regist_date"><br>
-            서비스명:<br>
-            <input type="text" name="service_name"><br>
+            <input type="text" name="hanname" required><br>
+            서비스:<br>
+            <select name ="service_name" required>
+                <option>도메인</option>
+                <option>웹호스팅</option>
+                <option>하이웍스</option>
+                <option>웹호스팅</option>
+                <option>이미지호스팅</option>
+                <option>SSL호스팅</option>
+                <option>DB호스팅</option>
+                <option>빌더호스팅</option>
+                <option>모바일웹</option>
+                <option>하이웍스</option>
+                <option>오픈하이웍스</option>
+                <option>SMS호스팅</option>
+                <option>SMS호스팅2</option>
+                <option>SMS호스팅-월정액제</option>
+                <option>동영상호스팅-윈도우</option>
+                <option>동영상호스팅-플래시</option>
+                <option>동영상호스팅-스마트HD</option>
+                <option>디자인샵</option>
+                <option>웹에이젼시</option>
+                <option>간편제작</option>
+                <option>유지보수</option>
+                <option>서버호스팅</option>
+                <option>코로케이션</option>
+                <option>동영상단독</option>
+                <option>외부판매</option>
+                <option>E러닝단독</option>
+                <option>홈페이지빌더</option>
+                <option>이러닝호스팅</option>
+                <option>스마트페이지</option>
+                <option>독립서버형메일</option>
+                <option>클라우드</option>
+                <option>홈페이지관리대행</option>
+                <option>홈페이지제작</option>
+                <option>오피스365</option>
+                <option>오피스호스팅</option>
+                <option>웹에이전시호스팅</option>
+                <option>Aty빌더</option>
+                <option>크리에이터링크</option>
+            </select><br>
             도메인:<br>
-            <input type="text" name="domain"><br>
+            <input type="text" name="domain" required><br>
             만기일:<br>
-            <input type="date" name="expiration_date"><br>
+            <input type="date" name="expiration_date" required><br>
             기준 금액:<br>
-            <input type="text" name="extension_expense"><br>
+            <input type="text" name="extension_expense" required>원<br>
             기준 기간:<br>
-            <input type="text" name="extension_period"><br>
+            <input type="text" name="extension_period" placeholder="'년' 또는 '월' 입력" required><br>
             연장 가능 기한:<br>
-            <input type="text" name="extendable_limit"><br>
-            총 서비스 수:<br>
-            <input type="text" name="total_count"><br><br>
+            <input type="text" name="extendable_limit" required>일<br><br>
         </fieldset><br>
         <fieldset style = "width:150">
             <legend>메일 발송 정보</legend> 
             이메일 주소:<br>
-            <input type="email" name="이메일"><br>
+            <input type="email" name="이메일" required><br>
         </fieldset><br>
-        <input type="submit" value="발송하기">
+        <button type="button" class="btn">발송하기</button>
     </form>
 </body>
 </html>
