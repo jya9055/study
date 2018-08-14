@@ -6,18 +6,42 @@
     <title>연장 알림 메일 수동 발송
     </title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="../../../css/bootstrap.min.css" />
-    <script src="../../../js/bootstrap.js"></script>
+    <link href="{{ url_for('static', filename='style/bootstrap.css')}}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='style/bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='style/starter-template.css')}}" rel="stylesheet">
+ 
 </head>
 <body>
-    <h1>메일 발송에 필요한 정보를 입력하세요</h1>
+    <script src="{{ url_for('static', filename='js/bootstrap.js')}}"></script>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">기능 모음</a>
+            </div>
+            <div id="navbar" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                  <li class="active"><a href="/">Home</a></li>
+                  <!-- <li><a href="#about">About</a></li>
+                  <li><a href="#contact">Contact</a></li> -->
+                </ul>
+            </div><!--/.nav-collapse -->
+        </div>
+    </nav>
+    <div class="container"><br>
+    <h1>메일 발송에 필요한 정보를 입력하세요</h1><br>
     <form action = "/result" method = "POST">
-        <fieldset style = "width:150">
+        <div class="form-group">
             <legend>메일 콘텐츠</legend>
-            회원 이름:<br>
-            <input type="text" name="hanname" required><br>
-            서비스:<br>
-            <select name ="service_name" required>
+            <label for="inputName" class="control-label">회원 이름</label><br>
+            <input type="text" class="form-control" name="hanname" required><br>
+            <label for="inputName" class="control-label">서비스</label><br>
+            <select name ="service_name" class="form-control" required>
                 <option>도메인</option>
                 <option>웹호스팅</option>
                 <option>하이웍스</option>
@@ -57,23 +81,30 @@
                 <option>Aty빌더</option>
                 <option>크리에이터링크</option>
             </select><br>
-            도메인:<br>
-            <input type="text" name="domain" required><br>
-            만기일:<br>
-            <input type="date" name="expiration_date" required><br>
-            기준 금액:<br>
-            <input type="text" name="extension_expense" required>원<br>
-            기준 기간:<br>
-            <input type="text" name="extension_period" placeholder="'년' 또는 '월' 입력" required><br>
-            연장 가능 기한:<br>
-            <input type="text" name="extendable_limit" required>일<br><br>
-        </fieldset><br>
-        <fieldset style = "width:150">
+            <label for="inputName" class="control-label">도메인</label><br>
+            <input type="text" class="form-control" name="domain" required><br>
+            <label for="inputName" class="control-label">만기일</label><br>
+            <input type="date" class="form-control" name="expiration_date" required><br>
+            <label for="inputName" class="control-label">기준 금액</label><br>
+            <input type="number" class="form-control" name="extension_expense" placeholder="숫자만 입력" required><br>
+            <label for="inputName" class="control-label">기준 기간</label><br>
+            <input type="text" class="form-control" name="extension_period" placeholder="'년' 또는 '월' 입력" required><br><br>
+        </div><br>
+        <div class="form-group">
             <legend>메일 발송 정보</legend> 
-            이메일 주소:<br>
-            <input type="email" name="이메일" required><br>
-        </fieldset><br>
-        <button type="button" class="btn">발송하기</button>
+            <label for="inputName" class="control-label">이메일 주소</label><br>
+            <input type="email" class="form-control" name="이메일" required><br>
+        </div><br>
+        <div class="form-inline row">
+            <div class="form-group col-sm-6">
+                <button type="submit" class="btn btn-lg btn-primary btn-block">발송하기</button>
+            </div>
+            <div class="form-group col-sm-6">
+                <button type="reset" class="btn btn-lg btn-primary btn-block">초기화</button>
+            </div>
+        </div>
+        <!-- <input type="submit" value="전송"> form 데이터에서는 type이 submit이어야 함! type button인 경우 javascript 필요 -->
     </form>
+    </div>
 </body>
 </html>

@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request
 from jya_gAPIclass import GapiClass
 from datetime import date
+import datetime
 import pystache
 import codecs
 
@@ -28,9 +29,11 @@ def result():
 		service_name = k['service_name']
 		domain = k['domain']
 		expiration_date = k['expiration_date']
-		extension_expense = k['extension_expense']
+		convert_date = datetime.datetime.strptime(expiration_date, "%Y-%m-%d").date() # 문자인 expiration_date를 날짜 형식으로 변환 - 남은 일수(extendable_limit)를 자동 계산하기 위함
+		extension_expense = format(int(k['extension_expense']), ',') # 숫자에 자동으로 콤마 넣어주기
 		extension_period = k['extension_period']
-		extendable_limit = k['extendable_limit']
+		delta = convert_date - date.today()
+		extendable_limit = delta.days
 		total_count = 1
 		mail = k['이메일']
 		
@@ -63,4 +66,4 @@ def send():
 
 
 if __name__ == '__main__':
-    app.run()
+    app.run(host='0.0.0.0', port='2005')
