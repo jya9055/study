@@ -6,7 +6,7 @@
 1. node.js 기반
 1. 브라우저 기반의 테스트 프레임웍을 제공하는 오픈소스 프로젝트인 selenium을 이용
 1. selenium webdriver를 이용하여 selenium 서버와 통신, 브라우저 제어
-[NightWatch 구조](https://github.com/Yokan-Study/study/issues/50)
+- [NightWatch 구조](https://user-images.githubusercontent.com/33053527/49426571-4fe7de00-f7e4-11e8-8544-ec03b26fb561.png)
 
 ## 실습
 1. 환경 구축하기
